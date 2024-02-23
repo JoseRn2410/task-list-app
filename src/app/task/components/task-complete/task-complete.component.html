@@ -1,0 +1,20 @@
+<h3 class="text-light">Tareas Completadas</h3>
+<hr class="text-light">
+
+<ul class="list-group ">
+    <li 
+       
+        class="list-group-item list-group-item-action list-group-item-success d-flex justify-content-between align-items-center"
+        *ngFor="let task of taskListComplete; let i = index">
+        <div>
+            {{i + 1 }}. {{ task.description }}
+        </div>
+
+        <div>
+            <button (click)="emitPendingTask(task.id)" class="btn btn-primary">Marcar como pendiente</button>
+        </div>
+
+    </li>
+
+
+</ul>

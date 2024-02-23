@@ -1,0 +1,24 @@
+<h1 class="text-light">Lista de Tareas</h1>
+<hr class="text-light">
+
+<div class="row text-light">
+    <add-task (onNewTasks)="onNewTask($event)" ></add-task>   
+</div>
+
+<div class="row">
+    <div class="col">
+        <list-task-to-do 
+            (onNewTasksComplete)="onNewTaskComplete($event)" 
+            (onDeleteTasks)="onDeleteTask($event)"
+            [taskList]="tasks"> 
+    </list-task-to-do>
+    </div>
+
+    <div class="col text-light">
+        <task-complete
+            (onPendingTasks)="onPendingTask($event)"
+            [taskListComplete]="taskListComplete">
+            
+        </task-complete>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<h3 class="text-light">Agregar Tarea</h3>
+<hr>
+
+<div>
+    <form action="" (ngSubmit)="emitTasks()">
+        <input 
+            class="form-control" 
+            type="text" 
+            [(ngModel)]="task.description"
+            name="add-task"
+            placeholder="Agregar Descripción de la Tarea">
+
+            <button type="submit" class="btn btn-success mt-2">
+                Agregar
+            </button>
+    </form>
+</div>
+
+
+
+<hr>
